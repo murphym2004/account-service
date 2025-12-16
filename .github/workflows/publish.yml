@@ -25,6 +25,9 @@ jobs:
         run: mvn -B package -DskipTests
         working-directory: ./AccountService
 
+      - name: Check Dockerfile
+        run: ls -l ./Dockerfile
+
       - name: Set image name (lowercase)
         run: echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY,,}/app" >> $GITHUB_ENV
 

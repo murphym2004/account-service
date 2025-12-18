@@ -23,7 +23,7 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B package -DskipTests
-        working-directory: ./AccountService
+        working-directory: ./account-service/AccountService
 
       - name: Check Dockerfile
         run: ls -l ./Dockerfile
